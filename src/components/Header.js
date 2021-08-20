@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import router from 'next/router';
 import { useState } from 'react';
-function Header() {
+function Header({ placeholder }) {
   const [timeoutId, setTimeoutId] = useState();
 
   const onSearchChange = (e) => {
@@ -36,7 +36,7 @@ function Header() {
         <input
           onChange={onSearchChange}
           type="text"
-          placeholder="Search Recipe"
+          placeholder={placeholder || 'Search Recipe'}
           className="flex-grow pl-5 text-sm text-gray-600 placeholder-gray-400 bg-transparent outline-none"
         />
       </div>

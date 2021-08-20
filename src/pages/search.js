@@ -24,18 +24,9 @@ function search() {
   }, [query]);
   return (
     <div>
-      <Header />
+      <Header placeholder={`${query}`} />
       <main className="flex">
         <section className="flex-grow px-6 pt-14">
-          <p className="text-xs">Guests</p>
-          <h1 className="mt-2 text-3xl font-semibold">Stays</h1>
-          <div className="hidden mb-5 space-x-3 text-gray-800 lg:inline-flex whitespace-nowrap">
-            <p className="button">Cancellation Flexibility</p>
-            <p className="button">Type of Place</p>
-            <p className="button">Price</p>
-            <p className="button">Rooms and Beds</p>
-            <p className="button">More Filters</p>
-          </div>
           <div className="flex flex-wrap gap-5 p-8 justify-evenly">
             {recipeList.length &&
               recipeList.map((recipeObj) => (
